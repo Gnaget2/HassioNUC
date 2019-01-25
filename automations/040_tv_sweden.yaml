@@ -1,0 +1,10 @@
+
+- alias: '040:Sweden'
+  id: '040'
+  trigger:
+    platform: time_pattern
+    minutes: '/5'
+    seconds: 2
+  action:
+    service: script.turn_on
+    entity_id: script.tv_sweden

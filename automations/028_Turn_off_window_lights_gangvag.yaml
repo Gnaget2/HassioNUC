@@ -1,0 +1,20 @@
+###################################
+## auto slå av fönsterbelysningen gångväg 59 min efter att det blivit ljust ute
+##
+## last changed: 2018-06-04
+###################################
+- alias: '028: windows lights gångväg off'
+  id: '028'
+  trigger:
+    - platform: state
+      entity_id: switch.ljussensor
+      to: 'off'
+      for:
+        minutes: 59
+  condition: []
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: 
+          - switch.fonster_gangvag
+

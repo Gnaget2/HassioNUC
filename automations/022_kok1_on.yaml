@@ -1,0 +1,18 @@
+###################################
+## auto tänd bänkbelysning vid rörelse
+##
+## last changed: 2018-05-11
+###################################
+- alias: '022: Tänd köket vid rörelse'
+  id: '022'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.xiaomi_pir_1
+      to: 'on'
+  condition: []
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.kitchen
+        brightness_pct: 100
+        transition: 1

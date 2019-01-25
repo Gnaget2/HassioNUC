@@ -1,0 +1,21 @@
+###################################
+## Återställ belysning efter film
+##
+## last changed: 2018-05-04
+###################################
+- alias: '011: dimm back from Movie'
+  id: '011'
+  trigger:
+    - platform: state
+      entity_id: sensor.family_room
+      from: Film
+  condition:
+  - condition: sun
+    after: sunset
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.Lampor7
+        brightness_pct: 99
+        transition: 10
+    

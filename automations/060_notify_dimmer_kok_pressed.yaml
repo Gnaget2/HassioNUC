@@ -1,0 +1,64 @@
+###################################
+## notis när dimmer_kok button is pressed
+##
+## last changed: 2018-04-25
+###################################
+- alias: '057: dimmer_kok button'
+  id: '057'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: dimmer_kok
+      event: 1002
+  action:
+    service: light.toggle
+    entity_id: light.koktak
+        
+- alias: '058: dimmer_kok button'
+  id: '058'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: dimmer_kok
+      event: 2002
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.koktak
+        brightness: >
+          {% set bri = states.light.koktak.attributes.brightness | int %}
+          {{ [bri+30, 249] | min }}
+        
+- alias: '059: dimmer_kok button'
+  id: '059'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: dimmer_kok
+      event: 3002
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.koktak
+        brightness: >
+          {% set bri = states.light.koktak.attributes.brightness | int %}
+          {{ [bri-30, 0] | max }}
+        
+- alias: '060: Dimm kitchen after motion'
+  id: '060'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.xiaomi_pir_1
+      to: 'off'
+      for:
+        minutes: 10
+  condition:
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.koktak
+
+

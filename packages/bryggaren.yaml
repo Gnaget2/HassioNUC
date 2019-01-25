@@ -1,0 +1,66 @@
+##################################################################################################
+# coffey  package                                                                                #
+# Version 1.0.  last changed 2018-11-03                                                          #
+# Created for and tested with Home Assistant Hassio version 0.81.4                               #
+# Creator Mikael Danell SHG                                                                      #
+##################################################################################################
+
+
+
+
+# Automation section
+automation:
+  - alias: "038: TTS Kaffebryggaren"
+    id: '038'
+    initial_state: true
+    trigger:
+      - platform: state
+        entity_id: sensor.kaffebryggaren
+        to: 'Värmer'
+        from: 'Brygger'
+        for:
+          minutes: 3
+      - platform: state
+        entity_id: sensor.kaffebryggaren
+        to: 'Avstängd'
+    action:
+       - service: media_player.sonos_snapshot
+         data:
+           entity_id: media_player.home
+       - service: tts.google_say
+         entity_id: media_player.home
+         data_template:
+           message: >-
+             {% if is_state('sensor.kaffebryggaren', 'Avstängd') %}
+               Kaffebryggaren stängdes av
+             {% else %}
+               Kaffet är klart
+             {% endif %}
+       - service: notify.lametric
+         data_template:
+           message: >-
+             {% if is_state('sensor.kaffebryggaren', 'Avstängd') %}
+               Kaffebryggaren stängdes av
+             {% else %}
+               Kaffet är klart
+             {% endif %}
+       - delay: '00:00:05'
+       - service: media_player.sonos_restore
+         data:
+           entity_id: media_player.home
+             
+sensor:
+  - platform: template
+    sensors:
+      kaffebryggaren:
+        friendly_name: "Kaffebryggaren"
+        value_template: >-
+          {% if states.sensor.power_37.state | float > 1000 %}
+            Brygger
+          {% else %}
+          {% if states.sensor.power_37.state | float > 5 %}
+            Värmer
+          {% else %} 
+             Avstängd
+          {% endif %}
+          {% endif %}

@@ -1,0 +1,27 @@
+###################################
+## Släck när vi lämnar hemmet eller det blir ljust
+##
+## last changed: 2018-05-04
+###################################
+- alias: '021: All Lights off'
+  id: '021'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.larmstatus
+      to: 'on'
+  condition: []
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - group.Lampor1
+          - group.Lampor2
+          - group.Lampor8
+    - service: light.turn_off
+      data:
+        entity_id: 
+          - group.Lampor1
+          - group.Lampor2
+          - group.Lampor7
+          - group.Lampor9
+          - group.Lampor10

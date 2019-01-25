@@ -1,0 +1,4 @@
+light.*:
+  assumed_state: true
+switch.*:
+  assumed_state: true

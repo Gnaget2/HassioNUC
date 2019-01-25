@@ -1,0 +1,21 @@
+###################################
+## Slå på belysningen barnens rum
+##
+## last changed: 2018-06-17
+###################################
+- alias: '006: Barnens rum on'
+  id: '006'
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: -01:00:00
+  condition:
+    - condition: time
+      before: '19:00'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.Lampor1
+    - service: switch.turn_on
+      data:
+        entity_id: group.Lampor1

@@ -1,0 +1,23 @@
+###################################
+## Slå på belysning i sovrum samt allrum 
+##
+## last changed: 2018-09-22
+###################################
+- alias: '025: Overvaningen sovrum allrum on'
+  id: '025'
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: -01:00:00
+  condition:
+    - condition: time
+      before: '21:30'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.sovrummet
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.allrum

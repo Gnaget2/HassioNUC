@@ -1,0 +1,25 @@
+###################################
+## slå av ytterbelsyningen baserat på ljussensorn utomhus
+##
+## last changed: 2018-04-15
+###################################
+- alias: '005: Ytterbelysningen off'
+  id: '005'
+  trigger:
+    - platform: state
+      entity_id: switch.ljussensor
+      to: 'off'
+      for:
+        minutes: 5
+  condition: []
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: group.ytterbelysningen
+    - service: light.turn_off
+      data:
+        entity_id: group.ytterbelysningen
+    - service: notify.ios_danell
+      data:
+        message: "outdoor lights off"
+        title: "lights"

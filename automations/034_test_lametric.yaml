@@ -1,0 +1,18 @@
+
+- alias: '036:Send notification on arrival at school'
+  id: '036'
+  trigger:
+    platform: state
+    entity_id: device_tracker.son_mobile
+    from: 'not_home'
+    to: 'school'
+  action:
+    service: notify.lametric
+    data:
+      message: "Micke åker från jobbet nu"
+      data:
+        sound: 'notification'
+        icon: 'i31'
+        cycles: 2
+        priority: 'info'
+

@@ -1,0 +1,20 @@
+###################################
+## auto Dimmra belysning för FILM
+##
+## last changed: 2018-05-04
+###################################
+- alias: '010: dimm for Movie'
+  id: '010'
+  trigger:
+    - platform: state
+      entity_id: sensor.family_room
+      to: Film
+  condition:
+  - condition: sun
+    after: sunset
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.Lampor7
+        brightness_pct: 5
+        transition: 15

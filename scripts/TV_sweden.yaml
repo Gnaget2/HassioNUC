@@ -1,0 +1,98 @@
+tv_sweden:
+  alias: "TV sweden" 
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: blue
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: yellow
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: blue
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: yellow
+        brightness_pct: 100
+    - delay:
+        seconds: 30
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: blue
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: yellow
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: blue
+        brightness_pct: 100
+    - delay:
+        seconds: 30
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: yellow
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: blue
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: yellow
+        brightness_pct: 100
+    - delay:
+        seconds: 30
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: blue
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: yellow
+        brightness_pct: 100
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: blue
+        brightness_pct: 100
+    - delay:
+        seconds: 2
+    - service: light.turn_on
+      data:
+        entity_id: light.TV
+        color_name: yellow
+        brightness_pct: 100
+

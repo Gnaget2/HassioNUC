@@ -1,0 +1,45 @@
+###################################
+## notis när xiomi button is pressed
+##
+## last changed: 2018-04-25
+###################################
+- alias: '053: XIAOMI button'
+  id: '053'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: lumisensor_switch
+      event: 1002
+  action:
+    - service: notify.ios_danell
+      data:
+        message: Xiaomi button 1002 pressed
+        
+- alias: '054: XIAOMI button'
+  id: '054'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: lumisensor_switch
+      event: 1000
+  action:
+    - service: notify.ios_danell
+      data:
+        message: Xiaomi button 1000 pressed
+        
+        
+- alias: '056: XIAOMI button'
+  id: '056'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: lumisensor_switch
+      event: 1004
+  action:
+    - service: notify.ios_danell
+      data:
+        message: Xiaomi dubble pressed
+

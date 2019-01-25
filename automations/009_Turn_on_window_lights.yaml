@@ -1,0 +1,27 @@
+###################################
+## auto slå på fönsterbelysningen undervåningen 
+##
+## last changed: 2018-08-12
+###################################
+- alias: '009: windows lights on'
+  id: '009'
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: -01:15:00
+  condition: []
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - group.Lampor5
+    - service: light.turn_on
+      data:
+        entity_id: light.fonster_vrum
+        brightness_pct: 99
+        transition: 5
+    - service: light.turn_on
+      data:
+        entity_id: light.fonster_bak
+        brightness_pct: 80
+        transition: 5

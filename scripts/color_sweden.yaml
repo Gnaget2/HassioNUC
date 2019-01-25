@@ -1,0 +1,13 @@
+farg_sweden:
+  alias: "outdoor sweden" 
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.ute_upp
+        color_name: blue
+        brightness_pct: 100
+    - service: light.turn_on
+      data:
+        entity_id: light.ute_ner
+        color_name: yellow
+        brightness_pct: 100

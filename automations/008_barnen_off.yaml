@@ -1,0 +1,19 @@
+###################################
+## auto stänger av lampora i barnen rum 21:00
+##
+## last changed: 2018-05-04
+###################################
+- alias: '008: Overvaningen barnen off'
+  id: '008'
+  trigger:
+    - platform: time
+      at: '21:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: 
+          - group.Lampor1
+    - service: light.turn_off
+      data:
+        entity_id: 
+          - group.Lampor1

@@ -1,0 +1,23 @@
+##################################################################################################
+# IOS actionnotifications package                                                                #
+# Version 1.0.  last changed 2018-12-27                                                          #
+# Created for and tested with Home Assistant Hassio version 0.84.6                               #
+# Creator Mikael Danell SHG                                                                      #
+##################################################################################################
+ios:
+  push:
+    categories:
+      - name: Lås upp
+        identifier: 'unlock'
+        actions:
+          - identifier: 'LOCK_UNLOCK_YES'
+            title: 'Ja'
+            authenticationRequired: yes
+            destructive: yes
+          - identifier: 'LOCK_UNLOCK_NO'
+            title: 'Nej'
+            activationMode: 'background'
+
+
+# Automation section
+

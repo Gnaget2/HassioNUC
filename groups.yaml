@@ -1,0 +1,283 @@
+############################################################
+#
+# Home Assistant Groups
+#
+############################################################
+default_view:
+  view: yes
+  name: testhem
+  icon: mdi:home
+  entities:
+    - group.ovrigt
+    - group.Lampor2
+    - group.Lampor3
+    - group.familjen
+    - persistent_notification.1234
+
+
+weather_view:
+  view: yes
+  name: Weather
+  icon: mdi:weather-partlycloudy
+  entities:
+    - group.vader
+    - group.netatmo
+    - camera.Weather
+
+Media view:
+  view: yes
+  name: Media
+  icon: mdi:play-pause
+  entities:
+    - group.Harmony
+    - group.Spotify
+    - group.AppleTV
+    - media_player.home
+    - media_player.liam
+
+Automation_view:
+  view: yes
+  name: Automatiseringar
+  icon: mdi:home-automation
+  entities:
+    - group.all_automations
+    - group.System
+    - group.all_scripts
+    - group.all_switches
+    - group.all_lights
+    
+
+conbee_view:
+  view: yes
+  name: conbee
+  icon: mdi:gate-xnor
+  entities:
+    - group.conbee_test
+
+conbee_test:
+  control: hidden
+  name: Conbee Test
+  entities:
+    - binary_sensor.xiaomi_pir_1
+    - binary_sensor.xiaomi_pir_2
+    - binary_sensor.xiaomi_pir_3
+    - binary_sensor.xiaomi_pir_4
+    - binary_sensor.xiaomi_pir_5
+    - binary_sensor.hue_pir_uppe
+    - light.halltak
+    - sensor.dimmer_switch_battery_level
+    - sensor.tradfri_remote_control_battery_level
+    - sensor.hue_pir_uppe
+    - sensor.hue_pir_uppe_2
+    - binary_sensor.hue_pir_hallen
+    - sensor.hue_pir_hallen
+    - sensor.hue_pir_hallen_2
+    - light.gateway_light_7811dcb8d388
+    - sensor.illumination_7811dcb8d388
+    - sensor.dark_uppe
+    - sensor.dark_hallen
+    - sensor.dark_nere
+    - binary_sensor.hue_pir_nere
+    - sensor.hue_pir_nere
+    - sensor.hue_pir_nere_2
+
+Car:
+  control: hidden
+  name: YMA439
+  entities:
+    - lock.yma439_lock
+    - switch.yma439_heater
+    - device_tracker.volvo_yma439
+    - binary_sensor.yma439_brake_fluid
+    - binary_sensor.yma439_bulbs
+    - binary_sensor.yma439_doors
+    - binary_sensor.yma439_service
+    - binary_sensor.yma439_washer_fluid
+    - binary_sensor.yma439_windows
+    - sensor.yma439_fuel_amount
+    - sensor.yma439_fuel_level
+    - sensor.yma439_odometer
+    - sensor.yma439_range
+
+Ovrigt:
+  control: hidden
+  name: Villa MiFi
+  entities:
+    - sensor.micke
+    - sensor.fia
+    - !secret verisure_alarm
+    - lock.huvudentre
+    - group.ytterbelysningen
+    - input_select.living_room_tv
+
+vader:
+  name: Klimat
+  entities:
+    -  sensor.sun_state
+    -  sensor.sovrummet_temperature
+    -  sensor.sovrummet_humidity
+    -  sensor.kok_temperature
+    -  sensor.sovrum
+    -  sensor.sovrum_2
+    -  sensor.sovrum_3
+    -  sensor.lekstugan_inne_temperature
+    -  sensor.lekstugan_ute_temperature
+    
+netatmo:
+  name: Netatmo
+  entities:
+    -  sensor.netatmo_ute_temperature
+    -  sensor.netatmo_inne_temperature
+    -  sensor.vind_nu
+    -  sensor.netatmo_regn_rain
+    -  sensor.netatmo_inne_co2
+    -  sensor.netatmo_inne_humidity
+    -  sensor.netatmo_inne_noise
+    -  sensor.netatmo_inne_pressure
+    -  sensor.netatmo_inne_wifi
+    -  sensor.netatmo_ute_battery
+    -  sensor.netatmo_ute_humidity
+    -  sensor.netatmo_ute_radio
+    -  sensor.netatmo_regn_battery
+    -  sensor.netatmo_regn_radio
+    -  sensor.netatmo_vind_angle
+    -  sensor.netatmo_vind_battery
+    -  sensor.netatmo_vind_gust_angle
+    -  sensor.vind_byar
+    -  sensor.netatmo_vind_radio
+    
+
+Lampor1:
+  name: Barnens rum
+  entities:
+    -  light.liam_fonster
+    -  switch.liam
+    -  switch.mirandas_fonster
+    
+Lampor2:
+  name: Lampor Övervåningen
+  entities:
+    -  light.liam_fonster
+    -  switch.liam
+    -  switch.mirandas_fonster
+    -  switch.sovrummet
+    -  light.allrum
+
+Lampor3:
+  name: Lampor Undervåningen
+  entities:
+    -  group.Lampor5
+    -  light.hallen
+    -  light.trappan
+    -  switch.under_trappan
+    -  switch.kok1
+    -  switch.kok2
+    -  light.matbord
+    -  light.tv_bank
+    -  light.tv
+    -  light.fonster_vrum
+    -  switch.VrumTAK
+    -  light.fonster_vrum
+    -  light.kitchen
+
+    
+Lampor4:
+  name: Lampor godnatt
+  entities:
+    -  switch.under_trappan
+    -  light.fonster_bak
+    -  switch.fonster_kok
+    -  switch.ljusstake_vrum
+
+Lampor5:
+  name: Lampor fönster undervåningen
+  entities:
+    -  switch.fonster_gangvag
+    -  switch.fonster_kok
+    -  light.fonster_bak
+    -  switch.ljusstake_vrum
+
+Lampor6:
+  name: Välkommen hem
+  entities:
+    -  switch.under_trappan
+
+
+Lampor7:
+  name: Lampor film
+  entities:
+    -  light.tv_bank
+    -  light.matbord
+    -  light.tv
+    -  light.fonster_vrum
+    
+Lampor8:
+  name: Alla Lampor
+  entities:
+    -  switch.under_trappan
+    -  switch.fonster_bak1
+    -  switch.fonster_gangvag
+    -  switch.fonster_kok
+    -  switch.mirandas_fonster
+    -  switch.sovrum
+
+    
+Lampor9:
+  name: Lampor hall/trappa
+  entities:
+    -  light.hallen
+    -  light.trappan
+    -  light.halltak
+
+Lampor10:
+  name: övrigt
+  entities:
+    -  light.kok2
+    -  light.kitchen
+    -  light.liam
+    -  light.koktak
+    
+Lampor11:
+  name: Vrum lampor
+  entities:
+    -  light.tv
+    -  light.tv_bank
+    -  light.fonster_vrum
+
+
+
+
+ytterbelysningen:
+  name: Ytterbelysningen
+  entities:
+    -  switch.ute_entre
+    -  switch.ute_entreslinga
+    -  switch.ute_trad_baksida
+    -  switch.lekstugan
+    -  light.ute_upp
+    -  light.ute_ner
+    
+AppleTV:
+  name: Apple TV
+  entities:
+    -  media_player.apple_tv
+    
+Spotify:
+  name: Spotify
+  entities:
+    -  media_player.spotify
+
+
+System:
+  name: Systeminfo
+  entities:
+    -  sensor.disk_use_percent_home
+    -  sensor.uptime
+    -  sensor.memory_use_percent
+    -  sensor.processor_use
+     
+Harmony:
+  name: Harmony Ultimate Remote
+  entities:
+   - input_text.harmony_remote
+   - input_select.living_room_tv

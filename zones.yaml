@@ -1,0 +1,132 @@
+  - name: Skolan
+    latitude: !secret zone_lati_skolan
+    longitude: !secret zone_long_skolan
+    radius: 100
+    icon: mdi:school
+
+  - name: Dagis
+    latitude: !secret zone_lati_dagis
+    longitude: !secret zone_long_dagis
+    radius: 20
+    icon: mdi:school
+
+  - name: !secret zone_name_MD_work
+    latitude: !secret zone_lati_MD_work
+    longitude: !secret zone_long_MD_work
+    radius: 75
+    icon: mdi:briefcase
+
+  # This will override the default home zone
+  - name: Home
+    latitude: !secret zone_lati_home
+    longitude: !secret zone_long_home
+    radius: 50
+    icon: mdi:home-circle
+
+  - name: !secret zone_name_fia_work
+    latitude: !secret zone_lati_fia_work
+    longitude: !secret zone_long_fia_work
+    radius: 300
+    icon: mdi:briefcase
+
+  - name: !secret zone_name_PI_home
+    latitude: !secret zone_lati_PI_home
+    longitude: !secret zone_long_PI_home
+    radius: 75
+    icon: mdi:home-outline
+
+  - name: Willys
+    latitude: 59.526998
+    longitude: 17.630207
+    radius: 100
+    icon: mdi:cart
+
+  - name: Bro Centrum
+    latitude: 59.516018
+    longitude: 17.642901
+    radius: 110
+    icon: mdi:apple-keyboard-command
+
+  - name: ICA Maxi
+    latitude: 59.414225
+    longitude: 17.863593
+    radius: 100
+    icon: mdi:cart
+
+  - name: Coop Brunna
+    latitude: 59.495811
+    longitude: 17.741048
+    radius: 80
+    icon: mdi:cart
+
+  - name: Bro IP
+    latitude: 59.506897
+    longitude: 17.645598
+    radius: 120
+    icon: mdi:soccer
+
+  - name: Bro
+    latitude: 59.515741
+    longitude: 17.651269
+    radius: 2500
+    icon: mdi:city
+
+  - name: Träning
+    latitude: 59.41710215533098
+    longitude: 17.824191274138002
+    radius: 100
+    icon: mdi:soccer
+
+  - name: sumpan
+    latitude: 59.364520
+    longitude: 17.975682
+    radius: 1000
+    icon: mdi:city
+
+  - name: Bromma Blocks
+    latitude: 59.356604
+    longitude: 17.951505
+    radius: 300
+    icon: mdi:city
+
+  - name: Kista C
+    latitude: 59.401979
+    longitude: 17.945729
+    radius: 750
+    icon: mdi:city
+    
+  - name: Barkarby
+    latitude: 59.416769
+    longitude: 17.860287
+    radius: 1000
+    icon: mdi:city
+
+  - name: Jakan C
+    latitude: 59.424366
+    longitude: 17.837456
+    radius: 400
+    icon: mdi:city
+
+  - name: Hemköp
+    latitude: 59.469140
+    longitude: 17.812003
+    radius: 300
+    icon: mdi:city
+
+  - name: MOS
+    latitude: 59.371864
+    longitude: 18.003985
+    radius: 400
+    icon: mdi:city
+
+  - name: Rinkeby
+    latitude: 59.389426
+    longitude: 17.927431
+    radius: 800
+    icon: mdi:city
+
+  - name: Kungsängen
+    latitude: 59.481604
+    longitude: 17.749762
+    radius: 800
+    icon: mdi:city
