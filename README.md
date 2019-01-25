@@ -2,8 +2,8 @@
 My running hassio config
 
 ### Running Hassio 0.86.1 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
-Homekit and Siri
-* Using alexa skill to integrate alexa to Home Assistant
+* Homekit and Siri
+* home assistant cloud for alexa and GA voice control
 
 ## Hubs
 * 433 mhz: RFXTRX433e
@@ -37,3 +37,4 @@ Homekit and Siri
 
 ## My gui
 
+WIP LL conversion
