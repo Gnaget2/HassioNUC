@@ -42,7 +42,7 @@ map:
 #Web page settings
 http:
   # Uncomment this to add a password (recommended!)
-  api_password: !secret http_password
+#  api_password: !secret http_password
   ip_ban_enabled: True
   login_attempts_threshold: 20
   trusted_networks:

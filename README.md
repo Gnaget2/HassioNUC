@@ -1,7 +1,7 @@
 # Hassio NUC
 My running hassio config
 
-### Running Hassio 0.86.1 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
+### Running Hassio 0.86.3 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
 * Homekit and Siri
 * Home assistant cloud for alexa and GA voice control
 
@@ -16,7 +16,7 @@ My running hassio config
 * Deconz docker container from marthoc 2.05.57
 
 ## Devices
-* Hue lights strios and PIR
+* Hue lights strips and PIR(for mation, temp and LUX)
 * Trådfri lights, pir and remotes
 * Nexa and Telldus plugs/dimmers (433mhz)
 * Ios-devices (iPhones, Apple watch, iPad)
