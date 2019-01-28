@@ -27,6 +27,10 @@ automation:
        - service: media_player.sonos_snapshot
          data:
            entity_id: media_player.home
+       - service: media_player.volume_set
+         data_template:
+           entity_id: media_player.home
+           volume_level: 0.4
        - service: tts.google_say
          entity_id: media_player.home
          data_template:

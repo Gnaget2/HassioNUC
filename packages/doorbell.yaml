@@ -41,6 +41,10 @@ automation:
        - condition: time
          after: '07:30'
          before: '22:00'
+       - service: media_player.volume_set
+         data_template:
+           entity_id: media_player.home
+           volume_level: 0.5
        - service: media_player.play_media
          data:
            entity_id: media_player.home
