@@ -34,7 +34,6 @@ frontend:
     - /local/custom_ui/state-card-tiles.html
   themes: !include_dir_named themes
 
-
 # Enables configuration UI
 config:
 # Enables map component
@@ -42,7 +41,7 @@ map:
 #Web page settings
 http:
   # Uncomment this to add a password (recommended!)
-#  api_password: !secret http_password
+  #  api_password: !secret http_password
   ip_ban_enabled: True
   login_attempts_threshold: 20
   trusted_networks:
@@ -183,7 +182,6 @@ history:
       - switch.kokremote1
       - switch.kokremote2
       
-
 # View all events in a logbook and what to exclude
 logbook:
   exclude:
@@ -219,7 +217,6 @@ logbook:
       - device_tracker
       - remote
       - group
-
 
 #Recorder delete old data from DB
 recorder:
@@ -282,13 +279,10 @@ device_tracker:
       - 10.1.106.102
       - 10.1.106.103
 
-
 media_player:
   - platform: spotify
     client_id: !secret spotify_id
     client_secret: !secret spotify_secret
-
-
 
 python_script:
 
@@ -308,9 +302,6 @@ homekit:
       - sensor.lekstugan_inne_temperature
       - sensor.lekstugan_ute_temperature
 
-
-
-
 tts:
   - platform: google
     cache: true
@@ -327,7 +318,6 @@ rfxtrx:
 #  gateways:
 #   - mac: 7811dcb8d388
 #     key: EC3AE8DA2C264473
-
 
 light:
   - platform: rfxtrx
@@ -358,40 +348,40 @@ switch:
       name: Ute träd baksida
     0b1100090159857203010f70:
       name: Under Trappan
-#    0b1100000149f9e101000070:
-#      name: Fönster bak1
-#    0b11000003addc7d01000070:
-#      name: Fönster bak2
+ #    0b1100000149f9e101000070:
+ #      name: Fönster bak1
+ #    0b11000003addc7d01000070:
+ #      name: Fönster bak2
     0b11000201d99a1201000070:
       name: Fönster gångväg
     0b11000a018e6f5210010f60:
       name: Fönster kök 
     0b11000302d77c2901000070:
       name: Ute Entre
-#    0b1100000187956601000070:
-#      name: Sovrum
-#    0b110000033ad7de01000070:
-#      name: Sovrum
+ #    0b1100000187956601000070:
+ #      name: Sovrum
+ #    0b110000033ad7de01000070:
+ #      name: Sovrum
     0b1100010029c6d301000070:
       name: Mirandas fönster
     0b11000d0328562e01000070:
       name: Lekstugan
     0b1100090159857204010f70:
       name: VrumTAK
-#    0b11000d0188057e0a010f70:
-#      name: Rörelse köket
+ #    0b11000d0188057e0a010f70:
+ #      name: Rörelse köket
     0b110006015bd9920a010f70:
       name: Ljussensor
-#    0b11000234bc0cfe04010f70:
-#      name: Router
+ #    0b11000234bc0cfe04010f70:
+ #      name: Router
     0b1100040009ac5202010f70:
       name: Hall B1
       fire_event: true
     0b11000b0009ac5201010f70:
       name: Hall B2
       fire_event: true
-#    0b11000166bc0cfe07010f70:
-#      name: Bänskiva
+ #    0b11000166bc0cfe07010f70:
+ #      name: Bänskiva
 
 #All sensors
 sensor:
@@ -594,19 +584,18 @@ cloud:
       include_entities:
         - light.TV
         - input_boolean.nightstatus
-#      include_domains:
-#        - light
-#      exclude_entities:
-#        - switch.outside
-#    entity_config:
-#      light.TV:
-#        name: TV
+ #      include_domains:
+ #        - light
+ #      exclude_entities:
+ #        - switch.outside
+ #    entity_config:
+ #      light.TV:
+ #        name: TV
   google_actions:
     filter:
       include_entities:
         - light.liam_fonster
         - switch.liam
-
 
 camera:
   - platform: generic
