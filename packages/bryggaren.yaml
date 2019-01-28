@@ -19,7 +19,7 @@ automation:
         to: 'Värmer'
         from: 'Brygger'
         for:
-          minutes: 3
+          minutes: 2
       - platform: state
         entity_id: sensor.kaffebryggaren
         to: 'Avstängd'
