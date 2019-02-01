@@ -152,14 +152,14 @@ Lampor1:
   entities:
     -  light.liam_fonster
     -  switch.liam
-    -  switch.mirandas_fonster
+    -  switch.miranda
     
 Lampor2:
   name: Lampor Övervåningen
   entities:
     -  light.liam_fonster
     -  switch.liam
-    -  switch.mirandas_fonster
+    -  switch.miranda
     -  switch.sovrummet
     -  light.allrum
 
@@ -218,7 +218,7 @@ Lampor8:
     -  switch.fonster_bak1
     -  switch.fonster_gangvag
     -  switch.fonster_kok
-    -  switch.mirandas_fonster
+    -  switch.miranda
     -  switch.sovrum
 
     

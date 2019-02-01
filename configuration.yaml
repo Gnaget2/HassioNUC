@@ -362,8 +362,8 @@ switch:
  #      name: Sovrum
  #    0b110000033ad7de01000070:
  #      name: Sovrum
-    0b1100010029c6d301000070:
-      name: Mirandas fönster
+ #   0b1100010029c6d301000070:
+ #     name: Mirandas fönster
     0b11000d0328562e01000070:
       name: Lekstugan
     0b1100090159857204010f70:
