@@ -162,6 +162,7 @@ Lampor2:
     -  switch.miranda
     -  switch.sovrummet
     -  light.allrum
+    -  light.allrumtak
 
 Lampor3:
   name: Lampor Undervåningen
@@ -188,6 +189,7 @@ Lampor4:
     -  light.fonster_bak
     -  switch.fonster_kok
     -  switch.ljusstake_vrum
+    -  light.allrumtak
 
 Lampor5:
   name: Lampor fönster undervåningen
@@ -236,6 +238,8 @@ Lampor10:
     -  light.kitchen
     -  light.liam
     -  light.koktak
+    -  light.allrumtak
+    -  light.trappan
     
 Lampor11:
   name: Vrum lampor
