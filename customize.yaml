@@ -165,3 +165,5 @@ binary_sensor.koksdorr:
   icon: mdi:door
 binary_sensor.openclose_18:
   icon: mdi:door
+light.allrumtak:
+  icon: mdi:track-light
