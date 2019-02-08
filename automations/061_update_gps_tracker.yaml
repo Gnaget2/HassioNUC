@@ -1,0 +1,15 @@
+###################################
+## Uppdatera GPS tracker
+##
+## last changed: 2019-02-08
+###################################
+- alias: '061: Update position'
+  id: '061'
+  trigger:
+    - platform: state
+      entity_id: device_tracker.sofias_iphone
+  action:
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.fia
+        value: "unknown"

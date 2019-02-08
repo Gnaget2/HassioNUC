@@ -167,3 +167,9 @@ binary_sensor.openclose_18:
   icon: mdi:door
 light.allrumtak:
   icon: mdi:track-light
+light.vrumtak:
+  icon: mdi:track-light
+group.lampor5:
+  icon: mdi:lightbulb-outline
+light.trappan:
+  icon: mdi:stairs

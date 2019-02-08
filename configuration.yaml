@@ -443,9 +443,13 @@ sensor:
           {% if is_state("device_tracker.sofias_iphone", "home") or is_state("device_tracker.fia_wifi", "home") or is_state("device_tracker.sofias_iphone_2", "home") %}
             Hemma
           {% else %}
+          {% if (not is_state("input_text.fia","unknown")) %}
+            {{ states("input_text.fia") }}
+          {% else %}
           {% if is_state("device_tracker.sofias_iphone", "not_home") %}
             Borta
           {% else %} {{ states("device_tracker.sofias_iphone") }}
+          {% endif %}
           {% endif %}
           {% endif %}
         icon_template: >-
@@ -557,6 +561,10 @@ input_boolean:
     name: Fönster lights
     icon: mdi:lightbulb-on-outline
 
+
+input_text:
+  fia:
+    name: Fia
 # Verisure integration
 verisure:
   username: !secret verisure_u
