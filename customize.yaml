@@ -173,3 +173,5 @@ group.lampor5:
   icon: mdi:lightbulb-outline
 light.trappan:
   icon: mdi:stairs
+switch.dockhuset:
+  icon: mdi:home-variant-outline
