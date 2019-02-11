@@ -18,6 +18,7 @@
   sidebar-selected-text-color: '#ffffff'
   sidebar-selected-icon-color: '#ffffff'
   sidebar-background-color: '#252526' 
+  lumo-body-text-color: "var(--primary-text-color)"
 # Colors based on variables, see above
   paper-card-header-color: "var(--paper-item-icon-color)"
   paper-item-icon-active-color: "var(--primary-color)"

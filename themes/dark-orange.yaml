@@ -36,3 +36,4 @@
   secondary-text-color: "var(--primary-color)"
   table-row-background-color: "var(--paper-card-background-color)"
   table-row-alternative-background-color: "#22272a"
+  lumo-body-text-color: "var(--primary-text-color)"
