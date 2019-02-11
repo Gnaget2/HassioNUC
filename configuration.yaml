@@ -40,13 +40,9 @@ config:
 map:
 #Web page settings
 http:
-  # Uncomment this to add a password (recommended!)
   #  api_password: !secret http_password
   ip_ban_enabled: True
   login_attempts_threshold: 20
-  trusted_networks:
-    - 127.0.0.1
-    - 10.1.106.0/24
 # Checks for available updates
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
