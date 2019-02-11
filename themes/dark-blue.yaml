@@ -13,6 +13,11 @@
   primary-text-color: "#cfcfcf"
   secondary-background-color: "#131313"
   sidebar-text_-_background: "#62717b"
+  sidebar-text-color: '#adadad'
+  sidebar-icon-color: '#adadad'
+  sidebar-selected-text-color: '#ffffff'
+  sidebar-selected-icon-color: '#ffffff'
+  sidebar-background-color: '#252526' 
 # Colors based on variables, see above
   paper-card-header-color: "var(--paper-item-icon-color)"
   paper-item-icon-active-color: "var(--primary-color)"
