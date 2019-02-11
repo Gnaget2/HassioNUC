@@ -1,16 +1,16 @@
 ###################################
 ## Dimmra köket efter ingen rörelse
 ##
-## last changed: 2018-05-11
+## last changed: 2019-02-11
 ###################################
 - alias: '023: Släck köket efter rörelse'
   id: '023'
   trigger:
     - platform: state
-      entity_id: binary_sensor.xiaomi_pir_1
+      entity_id: sensor.kok
       to: 'off'
       for:
-        minutes: 4
+        minutes: 5
   condition:
     - condition: state
       entity_id: input_boolean.larmstatus

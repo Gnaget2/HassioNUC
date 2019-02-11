@@ -413,6 +413,14 @@ sensor:
         entity_id: sensor.netatmo_vind_gust_strength
         unit_of_measurement: 'm/s'
         icon_template: mdi:weather-windy
+      kok:
+        friendly_name: "pir köket"
+        value_template: >-
+          {% if is_state("binary_sensor.xiaomi_pir_1", "on") or is_state("binary_sensor.xiaomi_pir_5", "on") %}
+            on
+          {% else %}
+            off
+          {% endif %}
       micke:
         friendly_name: "Micke"
         value_template: >-
