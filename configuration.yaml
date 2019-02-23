@@ -613,11 +613,6 @@ cloud:
         - light.liam_fonster
         - switch.liam
 
-camera:
-  - platform: generic
-    name: Weather
-    still_image_url: https://www.yr.no/place/Sweden/Stockholm/Upplands-Bro_Kommun/meteogram.svg
-    content_type: 'image/svg+xml'
 
 netatmo:
   api_key: !secret netatmo_api
