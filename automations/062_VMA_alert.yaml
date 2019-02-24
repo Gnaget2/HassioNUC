@@ -1,0 +1,16 @@
+###################################
+## Uppdatera GPS tracker
+##
+## last changed: 2019-02-08
+###################################
+- alias: '062: Krisinformation Alert'
+  id: '062'
+  trigger:
+    - platform: state
+      entity_id: sensor.vma_hemma
+      to: "Alert"
+  action:
+    - service: notify.ios_danell
+      data_template:
+          message: >
+            {{states.sensor.vma_hemma.attributes.messages[0].Headline}} - {{states.sensor.vma_hemma.attributes.messages[0].Message}} {{states.sensor.vma_hemma.attributes.messages[0].Web}}

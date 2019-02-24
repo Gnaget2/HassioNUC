@@ -50,6 +50,16 @@ updater:
 
 system_health:
 
+custom_updater:
+  mode: storage
+  track:
+    - cards
+    - components
+  show_installable: true
+  card_urls:
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+
 # Discover some devices automatically
 discovery:
   ignore:
@@ -546,7 +556,7 @@ sensor:
     name: VMA Hemma
     latitude: !secret zone_lati_home
     longitude: !secret zone_long_home
-    radius: 50
+    radius: 60
 
 # Bolean section
 input_boolean:
@@ -592,7 +602,7 @@ volvooncall:
 vacuum:
   - platform: xiaomi_miio
     host: 10.1.106.110
-    token: 55384542576d32395779516b6977326a
+    token: !secret vacumtoken
 
 cloud:
   alexa:

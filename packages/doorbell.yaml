@@ -48,7 +48,7 @@ automation:
        - service: media_player.play_media
          data:
            entity_id: media_player.home
-           media_content_id: http://10.1.106.106:8123/local/doorbell-2.mp3
+           media_content_id: !secret doorbell
            media_content_type: music
        - delay: '00:00:05'
        - service: media_player.sonos_restore
