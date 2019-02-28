@@ -1,7 +1,7 @@
 # Hassio NUC
 My running hassio config
 
-### Running Hassio 0.88.1 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
+### Running Hassio 0.88.2 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
 * Homekit and Siri
 * Home assistant cloud for alexa and GA voice control
 
@@ -11,6 +11,7 @@ My running hassio config
 
 ## Add-ons
 * Hassio MariaDB 0.2
+* LetsEncrypt
 * Hassio SSH server 5.1
 * Samba share 8
 * Deconz docker container from marthoc 2.05.57
