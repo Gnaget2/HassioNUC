@@ -51,7 +51,6 @@ updater:
 system_health:
 
 custom_updater:
-  mode: storage
   track:
     - cards
     - components
