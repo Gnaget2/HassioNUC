@@ -50,6 +50,8 @@ updater:
 
 system_health:
 
+mobile_app:
+
 custom_updater:
   track:
     - cards

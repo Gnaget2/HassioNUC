@@ -175,3 +175,7 @@ light.trappan:
   icon: mdi:stairs
 switch.dockhuset:
   icon: mdi:home-variant-outline
+binary_sensor.openclose_11:
+  icon: mdi:doorbell-video
+input_boolean.doorbellstatus:
+  icon: mdi:doorbell-video
