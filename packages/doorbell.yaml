@@ -67,7 +67,7 @@ automation:
     action:
       - service: lock.unlock
         data:
-          code: 795900
+          code: !secret doorcode
           entity_id: lock.huvudentre
            
   - alias: '039: doorbell restore'
