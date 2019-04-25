@@ -72,9 +72,9 @@
     icon: mdi:city
 
   - name: Träning
-    latitude: 59.458920
-    longitude: 17.820672
-    radius: 120
+    latitude: 59.416717529296875
+    longitude: 17.823753356933594
+    radius: 250
     icon: mdi:soccer
     
   - name: sumpan
