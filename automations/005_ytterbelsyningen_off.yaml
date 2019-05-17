@@ -19,7 +19,7 @@
     - service: light.turn_off
       data:
         entity_id: group.ytterbelysningen
-    - service: notify.ios_danell
-      data:
-        message: "outdoor lights off"
-        title: "lights"
+#    - service: notify.ios_danell
+#      data:
+#        message: "outdoor lights off"
+#        title: "lights"

@@ -13,6 +13,6 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.tv
+        entity_id: light.bakomtv
         
         

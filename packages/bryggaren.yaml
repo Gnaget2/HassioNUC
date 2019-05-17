@@ -24,7 +24,7 @@ automation:
         entity_id: sensor.kaffebryggaren
         to: 'Avstängd'
     action:
-       - service: media_player.sonos_snapshot
+       - service: sonos.snapshot
          data:
            entity_id: media_player.home
        - service: media_player.volume_set
@@ -49,7 +49,7 @@ automation:
                Kaffet är klart
              {% endif %}
        - delay: '00:00:05'
-       - service: media_player.sonos_restore
+       - service: sonos.restore
          data:
            entity_id: media_player.home
              

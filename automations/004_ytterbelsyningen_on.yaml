@@ -10,7 +10,7 @@
       entity_id: switch.ljussensor
       to: 'on'
       for:
-        minutes: 20
+        minutes: 15
   condition: []
   action:
     - service: switch.turn_on
@@ -19,7 +19,7 @@
     - service: light.turn_on
       data:
         entity_id: group.ytterbelysningen
-    - service: notify.ios_danell
-      data:
-        message: "outdoor lights on"
-        title: "lights"
+#    - service: notify.ios_danell
+#      data:
+#        message: "outdoor lights on"
+#        title: "lights"

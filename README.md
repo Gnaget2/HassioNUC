@@ -1,7 +1,7 @@
 # Hassio NUC
 My running hassio config
 
-### Running Hassio 0.91.4 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
+### Running Hassio 0.93.1 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
 * Homekit and Siri
 * Home assistant cloud for alexa and GA voice control
 

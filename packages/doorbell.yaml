@@ -21,7 +21,7 @@ automation:
        - service: input_boolean.turn_on
          data:
            entity_id: input_boolean.doorbellstatus
-       - service: media_player.sonos_snapshot
+       - service: sonos.snapshot
          data:
            entity_id: media_player.home
        - service: notify.ios_sofias_iphone
@@ -51,7 +51,7 @@ automation:
            media_content_id: !secret doorbell
            media_content_type: music
        - delay: '00:00:05'
-       - service: media_player.sonos_restore
+       - service: sonos.restore
          data:
            entity_id: media_player.home
            

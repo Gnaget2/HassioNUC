@@ -89,7 +89,7 @@ group.Lampor5:
 group.uteupp:
   assumed_state: true
   icon: mdi:alarm-light
-light.tv:
+light.bakomtv:
   assumed_state: true
   icon: mdi:television-classic
 group.all_automations:

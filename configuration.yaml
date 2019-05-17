@@ -444,17 +444,6 @@ sensor:
           {% else %} {{ states("device_tracker.danell") }}
           {% endif %}
           {% endif %}
-        icon_template: >-
-          {% if is_state("device_tracker.danell", "home") or is_state("device_tracker.danell_lan", "home") or is_state("device_tracker.danellbt", "home") %}
-            mdi:home-circle
-          {% else %}
-          {% if is_state("device_tracker.danell", "not_home") %}
-            mdi:close-circle-outline
-          {% else %}
-            {% set zone = states.device_tracker.danell.state %}
-            {{ states.zone[zone].attributes.icon }}
-          {% endif %}
-          {% endif %}
       fia:
         friendly_name: "Fia"
         value_template: >-
@@ -468,17 +457,6 @@ sensor:
             Borta
           {% else %} {{ states("device_tracker.sofias_iphone") }}
           {% endif %}
-          {% endif %}
-          {% endif %}
-        icon_template: >-
-          {% if is_state("device_tracker.sofias_iphone", "home") or is_state("device_tracker.fia_wifi", "home") or is_state("device_tracker.sofias_iphone_2", "home") %}
-            mdi:home-circle
-          {% else %}
-          {% if is_state("device_tracker.sofias_iphone", "not_home") %}
-            mdi:close-circle-outline
-          {% else %}
-            {% set zone = states.device_tracker.sofias_iphone.state %}
-            {{ states.zone[zone].attributes.icon }}
           {% endif %}
           {% endif %}
       dark_hallen:
