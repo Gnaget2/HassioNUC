@@ -289,6 +289,7 @@ device_tracker:
       - 10.1.106.101
       - 10.1.106.102
       - 10.1.106.103
+      - 10.1.106.125
 
 media_player:
   - platform: spotify
@@ -447,15 +448,15 @@ sensor:
       fia:
         friendly_name: "Fia"
         value_template: >-
-          {% if is_state("device_tracker.sofias_iphone", "home") or is_state("device_tracker.fia_wifi", "home") or is_state("device_tracker.sofias_iphone_2", "home") %}
+          {% if is_state("device_tracker.fia8", "home") or is_state("device_tracker.fia_lan", "home") or is_state("device_tracker.fiabt", "home") %}
             Hemma
           {% else %}
           {% if (not is_state("input_text.fia","unknown")) %}
             {{ states("input_text.fia") }}
           {% else %}
-          {% if is_state("device_tracker.sofias_iphone", "not_home") %}
+          {% if is_state("device_tracker.fia8", "not_home") %}
             Borta
-          {% else %} {{ states("device_tracker.sofias_iphone") }}
+          {% else %} {{ states("device_tracker.fia8") }}
           {% endif %}
           {% endif %}
           {% endif %}

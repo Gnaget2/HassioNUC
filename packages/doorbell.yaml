@@ -24,7 +24,8 @@ automation:
        - service: sonos.snapshot
          data:
            entity_id: media_player.home
-       - service: notify.ios_sofias_iphone
+       - delay: '00:00:01'
+       - service: notify.ios_fia8
          data:
            title: 'Det plingar på dörren'
            message: 'Vill du låsa upp?'
@@ -50,7 +51,7 @@ automation:
            entity_id: media_player.home
            media_content_id: !secret doorbell
            media_content_type: music
-       - delay: '00:00:05'
+       - delay: '00:00:07'
        - service: sonos.restore
          data:
            entity_id: media_player.home

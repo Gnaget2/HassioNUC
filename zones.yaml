@@ -62,7 +62,7 @@
   - name: Bro IP
     latitude: 59.506897
     longitude: 17.645598
-    radius: 120
+    radius: 150
     icon: mdi:soccer
 
   - name: Bro
@@ -110,7 +110,7 @@
   - name: Hemköp
     latitude: 59.469140
     longitude: 17.812003
-    radius: 300
+    radius: 100
     icon: mdi:city
 
   - name: MOS
@@ -129,4 +129,10 @@
     latitude: 59.481604
     longitude: 17.749762
     radius: 800
+    icon: mdi:city
+
+  - name: Projekt1
+    latitude: 59.345277
+    longitude: 18.083153
+    radius: 300
     icon: mdi:city

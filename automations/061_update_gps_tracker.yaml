@@ -7,7 +7,7 @@
   id: '061'
   trigger:
     - platform: state
-      entity_id: device_tracker.sofias_iphone
+      entity_id: device_tracker.fia8
   action:
     - service: input_text.set_value
       data:

@@ -27,6 +27,7 @@ automation:
        - service: sonos.snapshot
          data:
            entity_id: media_player.home
+       - delay: '00:00:01'
        - service: media_player.volume_set
          data_template:
            entity_id: media_player.home
@@ -48,7 +49,7 @@ automation:
              {% else %}
                Kaffet är klart
              {% endif %}
-       - delay: '00:00:05'
+       - delay: '00:00:07'
        - service: sonos.restore
          data:
            entity_id: media_player.home
