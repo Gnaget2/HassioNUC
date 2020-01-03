@@ -1,7 +1,7 @@
 ###################################
 ## belyningen hallen on
 ##
-## last changed: 2018-05-04
+## last changed: 2019-11-17
 ###################################
 - alias: '029: belysning hallen on'
   id: '029'
@@ -9,6 +9,9 @@
     - platform: state
       entity_id: input_boolean.larmstatus
       to: 'off'
+    - platform: state
+      entity_id: binary_sensor.hue_pir_hallen
+      to: 'on'
     - platform: state
       entity_id: sensor.dark_hallen
       to: 'True'

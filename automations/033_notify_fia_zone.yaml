@@ -9,7 +9,7 @@
     platform: state
     entity_id: sensor.fia
   action:
-    - service: notify.ios_danell
+    - service: notify.mobile_app_danell
       data_template:
         message: >
           Fia just changed from {{ trigger.from_state.state }} to {{ trigger.to_state.state }}

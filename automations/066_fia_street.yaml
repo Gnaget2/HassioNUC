@@ -1,0 +1,15 @@
+###################################
+## Meddela när fia byter gata
+##
+## last changed: 2019-12-06
+###################################
+- alias: '066: Fia new street extra'
+  id: '066'
+  trigger:
+    platform: state
+    entity_id: sensor.fiaextra
+  action:
+    - service: notify.mobile_app_danell
+      data_template:
+        message: >
+          Fia just changed from {{ trigger.from_state.state }} to {{ trigger.to_state.state }}

@@ -9,18 +9,26 @@
     - platform: state
       entity_id: input_boolean.larmstatus
       to: 'on'
-  condition: []
+      for:
+        minutes: 3
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: '06:30'
+        before: '15:00'
+      - condition: state
+        entity_id: input_boolean.larmstatus
+        state: 'on'
   action:
     - service: switch.turn_off
       data:
         entity_id:
-          - group.Lampor1
           - group.Lampor2
           - group.Lampor8
     - service: light.turn_off
       data:
         entity_id: 
-          - group.Lampor1
           - group.Lampor2
           - group.Lampor7
           - group.Lampor9

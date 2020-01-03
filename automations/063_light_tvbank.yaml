@@ -1,0 +1,29 @@
+###################################
+## Uppdatera GPS tracker
+##
+## last changed: 2019-02-08
+###################################
+- alias: '063: TV Bänk on'
+  id: '063'
+  trigger:
+    - platform: state
+      entity_id: switch.ljussensor
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.hue_pir_nere
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: '09:00'
+        before: '21:59'
+      - condition: state
+        entity_id: sensor.dark_nere
+        state: 'True'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.tv_bank
+        brightness_pct: 99
+        transition: 15

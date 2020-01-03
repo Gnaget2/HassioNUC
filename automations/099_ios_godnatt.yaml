@@ -1,0 +1,23 @@
+###################################
+## IOS godnatt, släck och stäng av 
+##
+## last changed: 2020-01-02
+###################################
+- alias: '099: Godnatt'
+  id: '099'
+  trigger:
+    - platform: event
+      event_type: ios.action_fired
+      event_data:
+        actionName: 'Godnatt'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: group.Lampor4
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.Lampor7
+          - group.Lampor9
+          - group.Lampor10
+          - light.fonster_bak

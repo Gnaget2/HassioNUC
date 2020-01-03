@@ -1,23 +1,23 @@
 # Hassio NUC
 My running hassio config
 
-### Running Hassio 0.93.1 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
+### Running Hassio 0.103.5 on Intel NUC NUC7i5BNK / i5-7260U / 8GB Ram DDR4 / 250GB SSD M2 /
 * Homekit and Siri
-* Home assistant cloud for alexa and GA voice control
+* Home assistant cloud for GA voice control
 
 ## Hubs
 * 433 mhz: RFXTRX433e
 * Conbee USB stick for Zigbee FW 26320500
 
 ## Add-ons
-* Hassio MariaDB 1.2
-* LetsEncrypt 3.0
-* Hassio SSH server 5.4
-* Samba share 8.1
-* Deconz docker container from marthoc 2.05.63
+* Hassio MariaDB
+* LetsEncrypt
+* Hassio SSH server
+* Samba share
+* Deconz docker container from marthoc
 
 ## Devices
-* Hue lights strips and PIR(for motion, temp and LUX)
+* Hue lights, strips, remotes and PIR(for motion, temp and LUX)
 * Trådfri lights, switch, pir and remotes
 * Nexa and Telldus plugs/dimmers (433mhz)
 * Ios-devices (iPhones, Apple watch, iPad)

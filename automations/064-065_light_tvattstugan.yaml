@@ -1,0 +1,43 @@
+###################################
+## TVättstugan
+##
+## last changed: 2019-02-08
+###################################
+- alias: '064: Tvättstuga on'
+  id: '064'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.hue_pir_tvattstuga
+      to: 'on'
+  condition:
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.tvattbank
+        brightness_pct: 100
+        transition: 2
+    - service: light.turn_on
+      data:
+        entity_id:  light.tvattstugan_tak
+        brightness_pct: 100
+        transition: 1
+
+
+- alias: '065: tvättstuga off'
+  id: '065'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.hue_pir_tvattstuga
+      to: 'off'
+      for:
+        minutes: 2
+  condition:
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.tvattbank
+        transition: 10
+    - service: light.turn_off
+      data:
+        entity_id:  light.tvattstugan_tak
+        transition: 10

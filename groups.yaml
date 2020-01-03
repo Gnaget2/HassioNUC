@@ -256,8 +256,9 @@ ytterbelysningen:
   entities:
     -  switch.ute_entre
     -  switch.ute_entreslinga
-    -  switch.ute_trad_baksida
+    -  switch.tradbaksida
     -  switch.lekstugan
+    -  switch.foradet
     -  light.ute_upp
     -  light.ute_ner
     

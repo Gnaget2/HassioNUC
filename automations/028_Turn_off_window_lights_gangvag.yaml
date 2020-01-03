@@ -17,4 +17,8 @@
       data:
         entity_id: 
           - switch.fonster_gangvag
+    - service: light.turn_off
+      data:
+        entity_id: light.tv_bank
+        transition: 15
 

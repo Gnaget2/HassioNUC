@@ -16,13 +16,13 @@
     conditions:
       - condition: time
         after: '20:00'
-        before: '06:30'
+        before: '08:30'
       - condition: state
         entity_id: sensor.dark_hallen
         state: 'True'
   action:
     - service: light.turn_on
       data:
-        entity_id: light.hall_roof
+        entity_id: light.halltak
         brightness_pct: 20
         transition: 10

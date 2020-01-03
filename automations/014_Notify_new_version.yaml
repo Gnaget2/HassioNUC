@@ -7,10 +7,10 @@
   id: '014'
   trigger:
     - platform: state
-      entity_id: updater.updater
+      entity_id: binary_sensor.updater
   condition: []
   action:
-    - service: notify.ios_danell
+    - service: notify.mobile_app_danell
       data:
         message: "Version {{ states.updater.updater.state }} \xE4r nu tillg\xE4nglig"
         title: "Ny version tillg\xE4nglig"

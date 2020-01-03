@@ -11,53 +11,23 @@ automation:
   - alias: "037: doorbell pressed"
     trigger:
       - platform: state
-        entity_id: binary_sensor.openclose_11
-        to: 'off'
-    condition:
-      - condition: state
-        entity_id: input_boolean.doorbellstatus
-        state: 'off'
+        entity_id: binary_sensor.ring_entre_ding
+        to: 'on'
     action:
-       - service: input_boolean.turn_on
-         data:
-           entity_id: input_boolean.doorbellstatus
-       - service: sonos.snapshot
-         data:
-           entity_id: media_player.home
-       - delay: '00:00:01'
-       - service: notify.ios_fia8
+       - service: notify.mobile_app_fiaiphone8
          data:
            title: 'Det plingar på dörren'
            message: 'Vill du låsa upp?'
            data:
              push:
                category: 'unlock'
-       - service: notify.ios_danell
+       - service: notify.mobile_app_danell
          data:
            title: 'Det plingar på dörren'
            message: 'Vill du låsa upp?'
            data:
              push:
-               category: 'unlock'
-       - condition: time
-         after: '07:30'
-         before: '22:00'
-       - service: media_player.volume_set
-         data_template:
-           entity_id: media_player.home
-           volume_level: 0.5
-       - service: media_player.play_media
-         data:
-           entity_id: media_player.home
-           media_content_id: !secret doorbell
-           media_content_type: music
-       - delay: '00:00:07'
-       - service: sonos.restore
-         data:
-           entity_id: media_player.home
-           
-           
-           
+               category: 'unlock'       
 
   - alias: 'svar låsupp ja'
     trigger:
@@ -70,25 +40,3 @@ automation:
         data:
           code: !secret doorcode
           entity_id: lock.huvudentre
-           
-  - alias: '039: doorbell restore'
-    id: '039'
-    initial_state: true
-    trigger:
-      - platform: state
-        entity_id: input_boolean.doorbellstatus
-        to: 'on'
-        for:
-          seconds: 5
-    action:
-      - service: input_boolean.turn_off
-        data:
-          entity_id: input_boolean.doorbellstatus
-           
-           
-# Bolean section
-input_boolean:
-  doorbellstatus:
-    name: Doorbell Pressed
-    initial: off
-    icon: mdi:check-outline
